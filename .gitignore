@@ -1,3 +1,4 @@
 zzz*
 *.md
 venv/
+__pycache__/

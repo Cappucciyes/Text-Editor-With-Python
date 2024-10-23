@@ -3,7 +3,7 @@ from tkinter import ttk
 
 
 class TextDisplay(ttk.Frame):
-    def __init__(self, parent):
+    def __init__(self, parent, textAPI):
         super().__init__(parent)
 
         self.textBody = Text(self)

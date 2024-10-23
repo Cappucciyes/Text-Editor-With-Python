@@ -1,7 +1,7 @@
 import inspect
 
 
-class TextManager():
+class TextAPI():
     textBody = None
 
     def __init__(self, textBody=None):
@@ -9,6 +9,12 @@ class TextManager():
             self.textBody = TextBody()
         elif textBody == None:
             self.textBody = TextBody(textBody)
+
+    def saveText(self):
+        print("Saved Text")
+
+    def loadText(self):
+        print("Loaded Text")
 
 
 class TextBody():
