@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
-from LoadButton import LoadButton
-from SaveButton import SaveButton
+from interface.LoadButton import LoadButton
+from interface.SaveButton import SaveButton
 
 
 class ToolBar(ttk.Frame):

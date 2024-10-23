@@ -1,11 +1,10 @@
-from logging import root
 from tkinter import *
 from tkinter import ttk
-from ToolBar import ToolBar
+from interface.ToolBar import ToolBar
+from interface.TextDisplay import TextDisplay
 
 
 class EditorInterface(Tk):
-
     def __init__(self):
         super().__init__()
         self.title = "Text Editor"
@@ -22,11 +21,15 @@ class EditorInterface(Tk):
         self.toolBar = ToolBar(self.mainFrame)
         self.toolBar.grid(column=0, row=0, sticky=(E, W))
 
-    def openInterface(self):
+        # attaching text within the frame
+        self.textDisplay = TextDisplay(self.mainFrame)
+        self.textDisplay.grid(row=1, column=0, sticky=(E, S, N))
+
+    def startInterface(self):
         self.mainloop()
 
 
 if __name__ == "__main__":
     interface = EditorInterface()
     interface.title = "Interface file is running"
-    interface.openInterface()
+    interface.startInterface()
