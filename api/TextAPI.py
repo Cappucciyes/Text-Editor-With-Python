@@ -1,4 +1,6 @@
 import inspect
+from tkinter import *
+from tkinter import ttk
 
 
 class TextAPI():
@@ -7,7 +9,7 @@ class TextAPI():
     def __init__(self, textBody=None):
         if textBody == None and self.textBody == None:
             self.textBody = TextBody()
-        elif textBody == None:
+        else:
             self.textBody = TextBody(textBody)
 
     def saveText(self):
@@ -15,6 +17,15 @@ class TextAPI():
 
     def loadText(self):
         print("Loaded Text")
+
+        popup = Tk()
+        subFrame = ttk.Frame(popup)
+        subFrame.grid(column=0, row=0, sticky=(N, W, E, S))
+
+        label = ttk.Label(subFrame, text="this is Load Window!")
+        label.grid(row=0, column=0)
+
+        popup.mainloop()
 
 
 class TextBody():
